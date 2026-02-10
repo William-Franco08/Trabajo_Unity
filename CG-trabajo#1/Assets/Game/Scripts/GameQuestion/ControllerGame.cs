@@ -27,11 +27,10 @@ public class ControllerGame : MonoBehaviour
     {
         string texto = Text.text;
         string[] informacion = texto.Split("-");
-        Debug.Log(informacion[0]);
-        string pregunta = informacion[0];
-        string opcion1 = informacion[1];
-        string opcion2 = informacion[2];
-        string opcion3 = informacion[3];
-        string opcion4 = informacion[4];
+        pregunta.text = informacion[0];
+        opcion1.text = informacion[1];
+        opcion2.text = informacion[2];
+        opcion3.text = informacion[3];
+        opcion4.text = informacion[4];
     }
 }
