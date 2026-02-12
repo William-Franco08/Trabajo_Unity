@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ControllerGame : MonoBehaviour
 {
-    List<PreguntasMultiples> PreguntasMultiples = new List<PreguntasMultiples>();
+    private List<PreguntasMultiples> PreguntasMultiples = new List<PreguntasMultiples>();
     public TextAsset Text;
     public TextMeshProUGUI pregunta;
     public TextMeshProUGUI opcion1;
@@ -24,7 +24,8 @@ public class ControllerGame : MonoBehaviour
         
     }
     public void LoadPreguntasMultiples()
-    {
+    {   
+
         string texto = Text.text;
         string[] informacion = texto.Split("-");
         pregunta.text = informacion[0];
