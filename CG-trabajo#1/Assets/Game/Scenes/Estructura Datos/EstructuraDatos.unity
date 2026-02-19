@@ -1406,7 +1406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &218164024
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2855,7 +2855,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649676300}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2912,9 +2912,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 401227519}
-        m_TargetAssemblyTypeName: StackDemoUI, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 401227520}
+        m_TargetAssemblyTypeName: DictionaryDemoUI, Assembly-CSharp
+        m_MethodName: mostrarQueue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3045,9 +3045,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 398528059}
-        m_TargetAssemblyTypeName: StackDemoUI, Assembly-CSharp
-        m_MethodName: Push
+      - m_Target: {fileID: 401227520}
+        m_TargetAssemblyTypeName: DictionaryDemoUI, Assembly-CSharp
+        m_MethodName: mostrarStack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4596,9 +4596,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 398528059}
-        m_TargetAssemblyTypeName: StackDemoUI, Assembly-CSharp
-        m_MethodName: Pop
+      - m_Target: {fileID: 401227520}
+        m_TargetAssemblyTypeName: DictionaryDemoUI, Assembly-CSharp
+        m_MethodName: mostrarDirectorio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4866,9 +4866,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 398528059}
-        m_TargetAssemblyTypeName: StackDemoUI, Assembly-CSharp
-        m_MethodName: Pop
+      - m_Target: {fileID: 401227520}
+        m_TargetAssemblyTypeName: DictionaryDemoUI, Assembly-CSharp
+        m_MethodName: mostrarQueue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5601,9 +5601,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 398528059}
-        m_TargetAssemblyTypeName: StackDemoUI, Assembly-CSharp
-        m_MethodName: Pop
+      - m_Target: {fileID: 401227520}
+        m_TargetAssemblyTypeName: DictionaryDemoUI, Assembly-CSharp
+        m_MethodName: mostrarDirectorio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6141,9 +6141,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 398528059}
-        m_TargetAssemblyTypeName: StackDemoUI, Assembly-CSharp
-        m_MethodName: Push
+      - m_Target: {fileID: 401227520}
+        m_TargetAssemblyTypeName: DictionaryDemoUI, Assembly-CSharp
+        m_MethodName: mostrarStack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6382,8 +6382,8 @@ RectTransform:
   - {fileID: 199139472}
   - {fileID: 1697527959}
   - {fileID: 1301893386}
-  - {fileID: 1443654407}
   - {fileID: 649676301}
+  - {fileID: 1443654407}
   - {fileID: 1102022004}
   - {fileID: 1452819686}
   m_Father: {fileID: 415245594}
@@ -7041,7 +7041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1910440975
 RectTransform:
   m_ObjectHideFlags: 0
