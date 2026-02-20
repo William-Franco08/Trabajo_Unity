@@ -6,19 +6,21 @@ using TMPro;
 public class QueueDemoUI : MonoBehaviour
 {
     [Header("UI")]
-    public TMP_InputField inputValue;
+    public TMP_InputField IdVehiculo;
+    public TMP_InputField Marca;
+    public TMP_InputField Modelo;
+    public TMP_InputField placa;
+    public TMP_InputField NumeroPuertas;
     public TextMeshProUGUI queueView;
     public TextMeshProUGUI frontView;
 
-    private Queue<string> queue = new Queue<string>();
+    private Queue<Carro> queue = new Queue<Carro>();
 
     public void Enqueue()
     {
-        string v = inputValue.text.Trim();
-        if (string.IsNullOrEmpty(v)) return;
+        int puertas = int.Parse(NumeroPuertas.text);
 
-        queue.Enqueue(v);
-        inputValue.text = "";
+        queue.Enqueue(new Carro(IdVehiculo.text, Marca.text, Modelo.text, placa.text, puertas));
         ShowQueue();
     }
 
@@ -26,8 +28,7 @@ public class QueueDemoUI : MonoBehaviour
     {
         if (queue.Count == 0) return;
 
-        string served = queue.Dequeue();
-        Debug.Log("DEQUEUE: " + served);
+        queue.Dequeue();
         ShowQueue();
     }
 
@@ -39,13 +40,14 @@ public class QueueDemoUI : MonoBehaviour
 
     private void ShowQueue()
     {
-        frontView.text = queue.Count > 0 ? $"FRENTE: {queue.Peek()}" : "FRENTE: (vacío)";
+        Carro top =queue.Peek();
+        frontView.text = queue.Count > 0 ? $"FRENTE: {top.idVehiculo} - {top.marca} - {top.modelo} - {top.placa} - {top.numeroPuertas}" : "FRENTE: (vacío)";
 
         var sb = new StringBuilder();
         sb.AppendLine("COLA (Frente → Final)");
 
         foreach (var item in queue)
-            sb.AppendLine("• " + item);
+            sb.AppendLine("ID: " + item.idVehiculo + ", Marca: " + item.marca + ", Modelo: " + item.modelo + ", Placa: " + item.placa + ", Puertas: " + item.numeroPuertas);
 
         queueView.text = sb.ToString();
     }
